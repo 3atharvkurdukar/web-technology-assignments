@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <h1>Registration Form</h1>
+  <hr>
+  <form>
+    <label for="firstname">First Name*</label>
+    <input type="text" name="firstname" id="firstname" required />
+    <br>
+    <label for="lastname">Last Name*</label>
+    <input type="text" name="lastname" id="lastname" required />
+    <br>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" />
+    <br>
+    <label for="mobileno">Mobile No.</label>
+    <input type="text" name="mobileno" id="mobileno" pattern="[0-9]{10}" maxlength="10" />
+    <br>
+    <label for="age">Age*</label>
+    <input type="number" name="age" id="age" max="120" min="1" required />
+    <br>
+    <label for="gender">Gender*</label>
+    <input type="radio" name="gender" id="gender" value="Male" required />Male
+    <input type="radio" name="gender" id="gender" value="Female" required />Female
+    <input type="radio" name="gender" id="gender" value="Other" required />Other
+    <br>
+    <label for="college">College Name*</label>
+    <input type="text" name="college" id="college" required />
+    <br>
+    <label for="semester">Semester*</label>
+    <select name="semester" id="semester" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+
+</html>
