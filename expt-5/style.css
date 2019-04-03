@@ -1,0 +1,116 @@
+html {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  line-height: 1.15;
+  background: linear-gradient(0deg, #cae5ee 0%, #a5a0f1 1000%);
+}
+
+body {
+	margin: 0px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+	margin-left: auto;
+}
+.form-input {
+	max-width: 500px;
+	padding: 10px 20px;
+	background: #a8dcee;
+	margin: 10px auto;
+	padding: 20px;
+	background: #a8dcee;
+	border-radius: 8px;
+	box-shadow: 10px  5px 10px #b6b6b6;
+}
+.form-input fieldset{
+	border: none;
+}
+.form-input legend {
+	text-align: center;
+	font-size: 1.6em;
+    margin-bottom: 30px;
+	font-weight: 700;
+	color: #012291;
+}
+.form-input label {
+	display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.form-input input[type="text"],
+.form-input input[type="date"],
+.form-input input[type="datetime"],
+.form-input input[type="email"],
+.form-input input[type="number"],
+.form-input textarea,
+.form-input select {
+	background: rgba(255,255,255,.1);
+	border: none;
+	border-radius: 8px;
+	font-size: 15px;
+	margin: 0;
+	outline: 0;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	background-color: #f3f3f3;
+	color:#2c2c2c;
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+}
+.form-input input[type="text"]:focus,
+.form-input input[type="date"]:focus,
+.form-input input[type="datetime"]:focus,
+.form-input input[type="email"]:focus,
+.form-input input[type="number"]:focus,
+.form-input textarea:focus,
+.form-input select:focus{
+	background: #ffffff;
+}
+.form-input select{
+	-webkit-appearance: menulist-button;
+	height:35px;
+}
+.form-input .number {
+	background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+.form-input input[type="submit"],
+.form-input input[type="button"]
+{
+	position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #355feb;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #3660eb;
+    border-width: 1px 1px 3px;
+    border-radius: 8px;
+	margin-bottom: 10px;
+}
+.form-input input[type="submit"]:hover,
+.form-input input[type="button"]:hover
+{
+	background: #0b40ec;
+}
