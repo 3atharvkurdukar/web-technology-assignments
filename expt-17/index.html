@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exception Handling</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-primary">Divide two numbers</h1>
+                <hr>
+                <form class="form-inline" id="form">
+                    <div class="form-group">
+                        <label for="num1">Num 1: </label>
+                        &nbsp;&nbsp;
+                        <input type="number" name="num1" id="num1" class="form-control">
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="form-group">
+                        <label for="num2">Num 2: </label>
+                        &nbsp;&nbsp;
+                        <input type="number" name="num2" id="num2" class="form-control">
+                    </div>
+                    &nbsp;&nbsp;
+                    <button type="submit" class="btn btn-primary">Divide</button>
+                </form>
+                <br>
+                <h4 id="ans" class="text-success"></h4>
+                <h4 id="error" class="text-danger"></h4>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#form').submit(function (e) {
+                e.preventDefault();
+
+                $('#ans').text('');
+                $('#error').text('');
+
+                const num1 = $('#num1').val();
+                const num2 = $('#num2').val();
+                try {
+                    if (num2 == 0) {
+                        throw new Error('Denominator cannot be zero')
+                    }
+                    const ans = num1 / num2;
+                    $('#ans').text('Answer = ' + ans);
+                } catch (error) {
+                    $('#error').text(error);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
