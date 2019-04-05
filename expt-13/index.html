@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pyramid</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-primary">Show Pyramid of given size</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label for="size">Size: </label>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <input type="number" name="size" id="size" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn align-middle btn-primary" onclick="showPyramid()">Show</button>
+                    </div>
+                </div>
+                <pre style="font-size: 1.5rem;" id="pyramid">
+                </pre>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        function showPyramid() {
+            const size = document.querySelector('#size').valueAsNumber;
+            console.log(size);
+            let pyramid = '';
+            let k = size - 1;
+
+            for (let i = 0; i < size; i++) {
+                for (let j = 0; j < k; j++) {
+                    pyramid += '  ';
+                }
+
+                k = k - 1;
+
+                for (let j = 0; j <= i; j++) {
+                    pyramid += ' *  ';
+                }
+                pyramid += '\n';
+            }
+            document.querySelector('#pyramid').innerHTML = pyramid;
+            console.log(pyramid);
+        }
+    </script>
+</body>
+
+</html>
